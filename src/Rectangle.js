@@ -7,7 +7,7 @@ function Rectangle(props) {
     height: `${props.height * offset}px`
   };
   return (
-    <div className="square" style={sizeClass}>
+    <div className="rectangle" style={sizeClass}>
       {props.width * props.height}
     </div>
   );
