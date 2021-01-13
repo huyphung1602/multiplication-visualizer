@@ -1,13 +1,13 @@
-import './App.css';
-import inputAnalyzer from "./inputAnalyzer.js"
-import preRenderer from "./preRenderer.js"
+import './MultiplicationVisualizer.css'
+import Visualization from "./Visualization"
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        { preRenderer.buildMatrix(inputAnalyzer.summandsArrays(231, 14)) }
+        <h1>Multiplication Visualizer</h1>
       </header>
+      <Visualization />
     </div>
   );
 }
