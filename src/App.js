@@ -1,11 +1,12 @@
 import './App.css';
-import inputAnalyzer from "./input_analyzer/inputAnalyzer.js"
+import inputAnalyzer from "./inputAnalyzer.js"
+import preRenderer from "./preRenderer.js"
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        { inputAnalyzer(231, 14) }
+        { preRenderer.buildMatrix(inputAnalyzer.summandsArrays(231, 14)) }
       </header>
     </div>
   );

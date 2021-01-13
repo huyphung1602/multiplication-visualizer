@@ -4,4 +4,9 @@ function numToSummands(num) {
   return arr.map ((x, index) => x * Math.pow(10, (len - index - 1)));
 }
 
-export default numToSummands;
+
+function summandsArrays(width, height) {
+  return [numToSummands(width), numToSummands(height)];
+}
+
+export default { summandsArrays, numToSummands };
