@@ -3,12 +3,12 @@ import React from "react";
 function Rectangle(props) {
   const offset = 10;
   const sizeClass = {
-    width: `${props.width * offset}px`,
-    height: `${props.height * offset}px`
+    width: `${props.size.width * offset}px`,
+    height: `${props.size.height * offset}px`
   };
   return (
     <div className="rectangle" style={sizeClass}>
-      {props.width * props.height}
+      {props.size.width * props.size.height}
     </div>
   );
 }

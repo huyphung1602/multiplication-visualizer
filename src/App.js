@@ -1,5 +1,5 @@
 import './MultiplicationVisualizer.css'
-import Renderer from "./Renderer"
+import MulVisualizer from './MulVisualizer'
 
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <h1>Multiplication Visualizer</h1>
       </header>
-      <Renderer />
+      <MulVisualizer />
     </div>
   );
 }
