@@ -14,10 +14,18 @@
   text-align: center;
 }
 
-.visualization-row:after {
-  clear: both;
-  content: "";
-  display: table;
+.rectangle-row {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-content: center;
+}
+
+.rectangle-col {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-content: center;
 }
 
 .visualization {

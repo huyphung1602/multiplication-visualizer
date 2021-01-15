@@ -3,7 +3,7 @@ import InputForm from "./InputForm"
 import Renderer from "./Renderer"
 
 class MulVisualizer extends React.Component {
-  state = { width: '', height: '' }
+  state = { width: 0, height: 0 }
 
   handleValues = (values) => {
     this.setState(values);

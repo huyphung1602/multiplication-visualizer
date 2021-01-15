@@ -20,7 +20,9 @@ class InputForm extends React.Component {
   };
 
   handleSubmit(event) {
-    this.props.onUpdateValues({ width: this.state.width, height: this.state.height });
+    const widthNum = this.state.width === '' ? 0 : this.state.width;
+    const heightNum = this.state.width === '' ? 0 : this.state.width;
+    this.props.onUpdateValues({ width: widthNum, height: heightNum });
     event.preventDefault();
   }
 

@@ -9,4 +9,5 @@ function summandsArrays(width, height) {
   return [numToSummands(width), numToSummands(height)];
 }
 
-export default { summandsArrays, numToSummands };
+const inputAnalyzer = { summandsArrays, numToSummands }
+export default inputAnalyzer;

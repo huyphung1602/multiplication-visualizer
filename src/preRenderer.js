@@ -6,4 +6,5 @@ function buildMatrix(arr) {
   return arr[1].map (x => mulMixer(arr[0], x));
 }
 
-export default { mulMixer, buildMatrix };
+const preRenderer = { mulMixer, buildMatrix };
+export default preRenderer;
