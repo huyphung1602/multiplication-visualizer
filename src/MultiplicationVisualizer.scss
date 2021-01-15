@@ -1,5 +1,8 @@
 .rectangle {
-  background: #fff;
+  display: block;
+  background-color: #fff;
+  box-shadow: 0 2px 3px rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.1);
+  color: #4a4a4a;
   border: 1px solid #999;
   float: left;
   font-size: 15px;

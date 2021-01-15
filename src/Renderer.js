@@ -5,6 +5,10 @@ import preRenderer from "./preRenderer"
 
 class Renderer extends React.Component {
   renderRect(height = 34, width = 34) {
+    const isZero = height === 0 || height === '' || width === 0 || width === '';
+    if (isZero) {
+      return;
+    }
     return <Reactangle size={{width, height}} />;
   }
 
