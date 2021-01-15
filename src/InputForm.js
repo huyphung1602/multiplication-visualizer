@@ -21,7 +21,7 @@ class InputForm extends React.Component {
 
   handleSubmit(event) {
     const widthNum = this.state.width === '' ? 0 : this.state.width;
-    const heightNum = this.state.width === '' ? 0 : this.state.width;
+    const heightNum = this.state.height === '' ? 0 : this.state.height;
     this.props.onUpdateValues({ width: widthNum, height: heightNum });
     event.preventDefault();
   }
