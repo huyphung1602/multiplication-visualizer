@@ -4,10 +4,6 @@ import inputAnalyzer from "./inputAnalyzer"
 import preRenderer from "./preRenderer"
 
 class Renderer extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   renderRect(height = 34, width = 34) {
     return <Reactangle size={{width, height}} />;
   }
@@ -39,7 +35,7 @@ class Renderer extends React.Component {
     const rows = preRenderer.buildMatrix(summandsArrays);
 
     return (
-      <div class="visualization">
+      <div className="visualization-board">
         { this.renderRows(rows) }
         <p>{`${width} * ${height} = ${this.renderFormula(rows)}`}</p>
       </div>

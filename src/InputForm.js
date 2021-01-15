@@ -27,12 +27,9 @@ class InputForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label> Width: 
-          <input type="number" value={this.state.width} onChange={this.updateWidth} />
-        </label>
-        <label> Height: 
-          <input type="number" value={this.state.height} onChange={this.updateHeight} />
-        </label>
+        <input type="number" value={this.state.width} onChange={this.updateWidth} />
+        <span> * </span>
+        <input type="number" value={this.state.height} onChange={this.updateHeight} />
         <input type="submit" value="Submit" />
       </form>
     );

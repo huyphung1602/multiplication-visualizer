@@ -1,12 +1,10 @@
-import './MultiplicationVisualizer.css'
+import './MultiplicationVisualizer.scss'
 import MulVisualizer from './MulVisualizer'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Multiplication Visualizer</h1>
-      </header>
+    <div class="visualization">
+      <h1>Multiplication Visualizer</h1>
       <MulVisualizer />
     </div>
   );

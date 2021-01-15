@@ -18,5 +18,12 @@
 }
 
 .visualization {
-  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+
+  .visualization-board {
+    margin-top: 20px;
+  }
 }
