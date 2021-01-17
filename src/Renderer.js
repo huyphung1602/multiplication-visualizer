@@ -12,16 +12,18 @@ class Renderer extends React.Component {
     return <Reactangle size={{width, height}} />;
   }
 
-  renderCols(cols) {
-    return cols.map (col =>
-      this.renderRect(col[0], col[1])
+  renderCols(cols, row_index) {
+    return cols.map ((col, col_index) =>
+      <div key={`${row_index}${col_index}`}>
+        {this.renderRect(col[0], col[1])}
+      </div>
     );
   }
 
   renderRows(rows) {
-    return rows.map (row =>
-      <div className="rectangle-row">
-        { this.renderCols(row) }
+    return rows.map ((row, row_index) =>
+      <div className="rectangle-row" key={`${row_index}`} >
+        { this.renderCols(row, row_index) }
       </div>
     );
   }
@@ -49,7 +51,7 @@ class Renderer extends React.Component {
 
     return (
       <div className="visualization-board">
-        <div className="rectangle-col">
+        <div className="rectangle-all">
           { this.renderRows(rows) }
         </div>
         <p>{this.formula(width, height, rows)}</p>
