@@ -5,11 +5,12 @@ import preRenderer from "./preRenderer"
 
 class Renderer extends React.Component {
   renderRect(height = 34, width = 34) {
+    const { width: finalWidth, height: finalHeight } = this.props.size;
     const isZero = height === 0 || width === 0;
     if (isZero) {
       return;
     }
-    return <Reactangle size={{width, height}} />;
+    return <Reactangle size={{width, height}} finalSize={{width: finalWidth, height: finalHeight}} />;
   }
 
   renderCols(cols, row_index) {
