@@ -37,11 +37,12 @@ class Renderer extends React.Component {
   formula(width, height, rows) {
     const isZero = height === 0 || width === 0;
     const rightSide = width + ' * ' + height;
+    const result = width * height;
     if (isZero) {
       return `${rightSide} = 0`;
     }
 
-    return `${rightSide} = ${this.rightSideFormula(rows)}`
+    return `${rightSide} = ${this.rightSideFormula(rows)} = ${result}`;
   }
   
   render() {
