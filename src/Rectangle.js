@@ -2,7 +2,6 @@ import React from "react";
 
 function Rectangle(props) {
   const offset = offSetCalculation(props.finalSize.width, props.finalSize.height);
-  console.log(offset);
   const sizeClass = {
     width: `${props.size.width * offset}px`,
     height: `${props.size.height * offset}px`
@@ -16,16 +15,14 @@ function Rectangle(props) {
 
 function offSetCalculation(width, height) {
   const defaultOffset = 10;
-  let interval = 0;
+  const { innerWidth: windowW, innerHeight: windowH } = window;
 
-  if (width > height) {
-    interval = Math.floor(width/40);
-  } else {
-    interval = Math.floor(height/40);
-  }
+  const intervalW = Math.floor(defaultOffset * width / (windowW/2));
+  const intervalH = Math.floor(defaultOffset * height / (windowH/2));
 
+  const interval = intervalW > intervalH ? intervalW : intervalH;
   if (defaultOffset - interval < 0) {
-    return 1;
+    return defaultOffset/interval;
   }
   return defaultOffset - interval;
 }
