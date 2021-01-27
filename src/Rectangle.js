@@ -14,17 +14,16 @@ function Rectangle(props) {
 }
 
 function offSetCalculation(width, height) {
-  const defaultOffset = 10;
+  const defaultOffset = 1.5;
   const { innerWidth: windowW, innerHeight: windowH } = window;
+  const numberW = windowW / (width * defaultOffset);
+  const numberH = windowH / (height * defaultOffset);
 
-  const intervalW = Math.floor(defaultOffset * width / (windowW/2));
-  const intervalH = Math.floor(defaultOffset * height / (windowH/2));
-
-  const interval = intervalW > intervalH ? intervalW : intervalH;
-  if (defaultOffset - interval < 0) {
-    return defaultOffset/interval;
+  if (numberW < numberH) {
+    return numberW;
   }
-  return defaultOffset - interval;
+
+  return numberH;
 }
 
 export default Rectangle;
